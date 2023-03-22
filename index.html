@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字转二维码</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .card {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>文字转二维码</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <form>
+                            <div class="form-group">
+                                <label for="text">输入要转换的文字：</label>
+                                <input type="text" class="form-control" id="text" placeholder="请输入要转换的文字">
+                            </div>
+                            <div class="form-group">
+                                <label for="qrcode">生成的二维码：</label>
+                                <div id="qrcode"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode("qrcode");
+        $('#text').on('input', function() {
+            var text = $(this).val();
+            qrcode.makeCode(text);
+        });
+    </script>
+</body>
+</html>
