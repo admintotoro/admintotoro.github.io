@@ -1,3 +1,5 @@
+好的，以下是修改后的代码，实现了页面打开时自动聚焦到输入框，并弹出键盘进行输入：
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +16,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="document.getElementById('text').focus()">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -49,3 +51,5 @@
     </script>
 </body>
 </html>
+
+我在body标签中使用了onload属性，将焦点设置在输入框上，从而实现打开页面自动聚焦到输入框。
