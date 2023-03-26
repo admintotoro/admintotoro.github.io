@@ -11,14 +11,29 @@
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
-  "icons": [
-    {
-      "src": "https://raw.githubusercontent.com/admintotoro/admintotoro.github.io/main/favicon.ico"
+   "icons": [
+      {
+      "src": "icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     },
-    {
-      "src": "/favicon.ico",
-      "type": "image/x-icon"
-    }
-  ],
+      {
+      "src": "icons/256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }, {
+      "src": "icons/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }, {
+      "src": "icons/144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+       {
+      "src": "icons/128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }],
   "shortcuts": []
 }
